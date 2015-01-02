@@ -2,6 +2,8 @@
 	Global: Main Navigation
 ------------------------------*/
 
+/* Entire Nav Bar */
+
 .top-bar {
 	background-color: #0D47A1;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
@@ -21,12 +23,22 @@
 	height: 4rem;
 }
 
-.top-bar .toggle-topbar.menu-icon {
-	margin-top: -9px;
-}
+/* Title Area */
 
 ul.title-area {
-	left: 72px;
+	padding-left: 15px;
+	height: 4rem!important;
+}
+
+/* Big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+	ul.title-area {
+		padding-left: 36px;
+	}
+
+	.top-bar-section {
+		padding-right: 15px;
+	}
 }
 
 ul.title-area h1 {
@@ -37,6 +49,39 @@ h1.cloud {
 	background: url("../img/cloud.png") no-repeat left center;
 	padding-left: 36px;
 }
+
+/* Right Section */
+
+.top-bar-section {
+	height: 4rem;
+	line-height: 4rem;
+}
+
+.top-bar.expanded {
+	padding-bottom: 20px;
+}
+
+.top-bar-section ul.right li a:hover {
+	background-color: #000!important;
+}
+
+.top-bar-section ul.right li {
+	background: none!important;
+}
+
+.top-bar-section ul.right li a {
+	background: #0D47A1!important;
+}
+
+.top-bar-section ul.right li a {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	line-height: 4rem!important;
+}
+
+/* ---------------------------
+	Global: Body
+------------------------------*/
 
 body {
 	background-color: #eee;
