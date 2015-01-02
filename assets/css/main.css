@@ -1,0 +1,43 @@
+/* ---------------------------
+	Global: Main Navigation
+------------------------------*/
+
+.top-bar {
+	background-color: #0D47A1;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+
+.top-bar .name h1,
+.top-bar .name h2,
+.top-bar .name h3,
+.top-bar .name h4,
+.top-bar .name p,
+.top-bar .name span {
+	line-height: 4rem;
+	font-size: 1.5rem;
+}
+
+.top-bar, .top-bar .name h1 {
+	height: 4rem;
+}
+
+.top-bar .toggle-topbar.menu-icon {
+	margin-top: -9px;
+}
+
+ul.title-area {
+	left: 72px;
+}
+
+ul.title-area h1 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1.cloud {
+	background: url("../img/cloud.png") no-repeat left center;
+	padding-left: 36px;
+}
+
+body {
+	background-color: #eee;
+}

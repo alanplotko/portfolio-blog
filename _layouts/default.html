@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
 
   {% include head.html %}
 
   <body>
 
-    {% include header.html %}
+    {% include nav.html %}
 
     <div class="page-content">
       <div class="wrapper">
@@ -13,8 +13,11 @@
       </div>
     </div>
 
-    {% include footer.html %}
-
+    <script src="/assets/js/vendor/jquery.js"></script>
+    <script src="/assets/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  
   </body>
-
 </html>
