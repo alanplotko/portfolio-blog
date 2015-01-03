@@ -46,8 +46,13 @@ ul.title-area h1 {
 }
 
 h1.cloud {
-	background: url("../img/cloud.png") no-repeat left center;
+	background: url("../img/cloud.svg") no-repeat left center;
+	background-size: 36px 36px;
 	padding-left: 36px;
+}
+
+.no-svg h1.cloud {
+	background-image: url("../img/cloud.png") no-repeat left center;
 }
 
 /* Right Section */
@@ -55,10 +60,6 @@ h1.cloud {
 .top-bar-section {
 	height: 4rem;
 	line-height: 4rem;
-}
-
-.top-bar.expanded {
-	padding-bottom: 20px;
 }
 
 .top-bar-section ul.right li a:hover {
