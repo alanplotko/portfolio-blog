@@ -185,9 +185,8 @@ ul#nav {
     list-style-type: none;
     position: relative;
     margin: 0;
-    top: 28px;
+    top: 18px;
     left: 40px;
-    width: 700px;
 }
 
 ul#nav li {
@@ -196,30 +195,17 @@ ul#nav li {
 	font-weight: 300;
 	font-size: 28px;
 	color: #fff;
-	margin-right: 40px;
+	margin-right: 30px;
+	vertical-align: middle;
 }
 
-ul#nav li.break {
-	width: 340px;
-}
-
-ul#icons {
-	text-align: center;
-	list-style-type: none;
-}
-
-ul#icons li {
-	display: inline-block;
-	margin-right: 10px;
-}
-
-ul#icons li img {
+ul#nav li img {
 	width: 64px;
 	height: 64px;
 	border-radius: 32px;
 	-moz-border-radius: 32px;
 	-webkit-border-radius: 32px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.26);
 }
 
 /* ---------------------------
