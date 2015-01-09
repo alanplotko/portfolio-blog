@@ -111,7 +111,7 @@ div#name h1 span.tagline {
 }
 
 div#photo {
-	right: 50px;
+	right: 40px;
 	z-index: 1;
 	margin: -72.17px 0 0 -125px;
 }
@@ -168,7 +168,7 @@ ul#social {
 	position: relative;
 	float: right;
 	top: 15px;
-	right: 350px;
+	right: 340px;
 }
 
 ul#social li {
