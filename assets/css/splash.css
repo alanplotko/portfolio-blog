@@ -1,0 +1,269 @@
+/* ---------------------------
+	General: Front Page
+------------------------------*/
+
+body {
+	background-color: #0D47A1;
+}
+
+div#home,
+div#photo {
+	position: fixed;
+	top: 50%;
+}
+
+div#home {
+	left: 50%;
+	width: 100%;
+	height: 200px;
+    margin: -100px 0 0 -50%;
+	z-index: 0;
+}
+
+div#name h1 {
+	position: relative;
+	font-size: 48px;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	margin-left: 40px;
+}
+
+div#name h1 span.tagline {
+	font-weight: 300;
+}
+
+div#photo {
+	right: 40px;
+	z-index: 1;
+	margin: -72.17px 0 0 -125px;
+}
+
+/* ---------------------------
+	Main Navigation
+------------------------------*/
+
+ul#nav {
+    list-style-type: none;
+    position: relative;
+    top: 0;
+    height: 80px;
+    margin: 0;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+ul#nav li {
+	display: inline-block;
+	margin: 18px 20px 0 20px;
+	vertical-align: middle;
+}
+
+ul#nav li > a {
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 28px;
+	color: #fff!important;
+}
+
+ul#nav li > a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: -5px;
+	left: 0;
+	background-color: #fff;
+	visibility: hidden;
+
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+ul#nav li > a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+/* ---------------------------
+	Social Navigation
+------------------------------*/
+
+ul#social {
+	list-style-type: none;
+	position: relative;
+	float: right;
+	top: 15px;
+	right: 340px;
+}
+
+ul#social li {
+	display: inline-block;
+}
+
+ul#social li > a > img {
+	width: 48px;
+	height: 48px;
+	margin-right: 10px;
+	border-radius: 24px;
+	-moz-border-radius: 24px;
+	-webkit-border-radius: 24px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.26);
+}
+
+/* ---------------------------------
+	Hexagon Photo Frame Design
+------------------------------------*/
+
+.hexagon {
+  position: relative;
+  width: 250px; 
+  height: 144.34px;
+  margin: 72.17px 0;
+  background-image: url("../img/photo.jpg");
+  background-size: auto 277.1281px;
+  background-position: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  border-left: solid 5px #fff;
+  border-right: solid 5px #fff;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 176.78px;
+  height: 176.78px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 31.61px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 138.5640646055102px;
+  -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-69.2820px);
+  -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-69.2820px);
+  transform: rotate(45deg) scaleY(1.7321) translateY(-69.2820px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -88.3883px;
+  border-top: solid 7.0711px #fff;
+  border-right: solid 7.0711px #fff;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -88.3883px;
+  border-bottom: solid 7.0711px #fff;
+  border-left: solid 7.0711px #fff;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 2.8868px;
+  left: 0;
+  width: 240px;
+  height: 138.5641px;
+  z-index: 2;
+  background: inherit;
+}
+
+/* ---------------------------------
+	Optimize for Mobile Platforms
+------------------------------------*/
+
+@media (max-width:425px) {
+
+	div#name h1 span.tagline {
+		font-size: 28px!important;
+	}
+
+}
+
+@media (max-width:700px) {
+
+	div#home {
+		position: inherit;
+		top: inherit;
+		left: inherit;
+		margin: 0!important;
+	}
+
+	div#name h1 {
+		margin-top: 20px!important;
+	}
+
+	ul#nav {
+		height: initial;
+		padding-bottom: 18px;
+	}
+
+	ul#nav li {
+		display: block;
+	}
+
+	ul#social {
+		top: 20px!important;
+	}
+
+}
+
+@media (max-width:1200px) {
+
+	div#home {
+    	margin: -150px 0 0 -50%;
+	}
+
+	div#photo {
+		display: none;
+	}
+
+	ul#nav {
+		text-align: center;
+	}
+
+	ul#social {
+		text-align: center;
+		float: none;
+		top: 35px;
+		right: inherit;
+	}
+
+	div#name h1 span.tagline {
+		font-size: 36px;
+		display: block;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	div#name h1 {
+		text-align: center;
+		margin: 0;
+	}
+
+}
