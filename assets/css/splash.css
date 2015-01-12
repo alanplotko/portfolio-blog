@@ -50,6 +50,7 @@ ul#nav {
     margin: 0;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
+	padding-left: 20px;
 }
 
 ul#nav li {
@@ -245,6 +246,7 @@ ul#social li > a > img {
 
 	ul#nav {
 		text-align: center;
+		padding-left: 0;
 	}
 
 	ul#social {
