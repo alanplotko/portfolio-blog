@@ -4,20 +4,23 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
+      <li class="card" style="background: url({{ post.thumbnail | prepend: "/assets/img/posts/" }}) no-repeat;">
+          
+        <span class="post-meta">
+          <span class="category"><a href="{{ post.category | prepend: "/blog/" }}">{{ post.category | upcase }}</a></span> 
+          {{ post.date | date: "%-d %b, %Y" | upcase }}
+        </span>
+        
         <h2>
-          <a class="post-link" href="{{ post.url | "/blog/" }}">{{ post.title }}</a>
+          <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
         </h2>
+      
       </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/blog/feed.xml" }}">via RSS</a></p>
+  <!--<p class="rss-subscribe">subscribe <a href="{{ "/blog/feed.xml" }}">via RSS</a></p>-->
 
 </div>
