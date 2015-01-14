@@ -7,7 +7,21 @@ twitter_username: alanplotko
 github_username:  alanplotko
 timezone: America/New_York
 encoding: utf-8
+permalink: /:categories/:title
 
 # Build settings
 markdown: kramdown
 highlighter: pygments
+
+# Site navigation
+navigation:
+- text: About
+  url: /about/
+- text: Portfolio
+  url: /portfolio/
+- text: Resume
+  url: /files/resume.pdf
+- text: Blog
+  url: /blog/
+- text: Contact
+  url: /contact/
