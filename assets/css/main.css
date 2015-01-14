@@ -72,7 +72,7 @@ h1.cloud {
 }
 
 .top-bar-section ul.right li > a:hover {
-	background-color: #000!important;
+	background-color: rgba(0,0,0,0.3)!important;
 	color: #fff;
 }
 
@@ -85,7 +85,7 @@ h1.cloud {
 }
 
 .top-bar-section ul.right li.active > a {
-	background: #000!important;
+	background: rgba(0,0,0,0.3)!important;
 }
 
 .top-bar-section ul.right li div#underline {
