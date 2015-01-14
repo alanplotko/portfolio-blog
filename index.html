@@ -8,11 +8,9 @@ title: Alan Plotko
     <h1>Alan Plotko &bull; <span class="tagline">Full Stack Web Developer<span></h1>
   </div>
   <ul id="nav">
-    <li><a href="#">About</a></li>
-    <li><a href="#">Portfolio</a></li>
-    <li><a href="#">Resume</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Contact</a></li>
+    {% for link in site.navigation %}
+    <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+    {% endfor %}
   </ul>
   <ul id="social">
     <li><a href="https://github.com/alanplotko"><img src="/assets/img/svg/github.svg" /></a></li>
