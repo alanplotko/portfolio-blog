@@ -13,8 +13,7 @@
       {% assign url = page.url | remove: 'index.html' %}
       {% for link in site.navigation %}
         <li {% if url == link.url %}class="active"{% endif %}>
-          <a href="{{ link.url }}">{{ link.text }}</a>
-          {% if url == link.url %}<div id="underline"></div>{% endif %}
+          <a href="{{ link.url }}">{{ link.text }}</a>{% if url == link.url %}<div id="underline"></div>{% endif %}
         </li>
       {% endfor %}
     </ul>
