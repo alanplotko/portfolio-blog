@@ -121,28 +121,54 @@ h1.cloud {
 
 ul.post-list {
 	list-style-type: none;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top: 20px;
 }
 
 ul.post-list li {
 	display: inline-block;
 	background-color: #fff!important;
-	background-size: contain!important;
 	width: 400px;
-	height: 400px;
-	margin: 40px 20px;
-	padding: 200px 20px 0;
+	height: 270px;
+	margin: 20px;
+	padding: 20px;
 	border: 1px solid rgba(0, 0, 0, 0.4);
+	vertical-align: top;
+	text-align: left;
 }
 
 ul.post-list li span.post-meta {
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-	font-family: Arial, sans-serif;
 }
 
 ul.post-list li h2 {
-	font-size: 24px;
 	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
 }
+
+ul.post-list li h2 > a {
+	color: #000!important;
+
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+ul.post-list li h2 > a:hover {
+	color: #008CBA!important;
+}
+
+ul.post-list li p.excerpt {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Card Design */
 
 .card {
 	position: relative;

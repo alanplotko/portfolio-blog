@@ -3,24 +3,19 @@ layout: default
 ---
 
 <div class="home">
-
   <ul class="post-list">
     {% for post in site.posts %}
-      <li class="card" style="background: url({{ post.thumbnail | prepend: "/assets/img/posts/" }}) no-repeat;">
-          
+      <li class="card">
         <span class="post-meta">
-          <span class="category"><a href="{{ post.category | prepend: "/blog/" }}">{{ post.category | upcase }}</a></span> 
-          {{ post.date | date: "%-d %b, %Y" | upcase }}
+          <span class="category"><a href="{{ post.category | downcase | replace: " ", "-" | prepend: "/blog/" }}">{{ post.category | upcase }}</a></span>
+          &nbsp;&nbsp;&nbsp;{{ post.date | date: "%-d %b, %Y" | upcase }}
         </span>
-        
         <h2>
           <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
         </h2>
-      
+        <p class="excerpt">{{ post.content | strip_html | truncatewords: 50 }} <a href="{{ post.url }}">Read more &raquo;</a></p>
       </li>
     {% endfor %}
   </ul>
-
   <!--<p class="rss-subscribe">subscribe <a href="{{ "/blog/feed.xml" }}">via RSS</a></p>-->
-
 </div>
