@@ -3,8 +3,9 @@ layout: default
 ---
 
 <div class="home">
+
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li class="card">
         <span class="post-meta">
           <span class="category"><a href="{{ post.category | downcase | replace: " ", "-" | prepend: "/blog/" }}">{{ post.category | upcase }}</a></span>
@@ -17,5 +18,40 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+
+  <div class="pagination-centered">
+    <ul class="pagination" role="menubar" aria-label="Pagination">
+      {% if paginator.previous_page and paginator.page != 1 %}
+        <li class="arrow">
+          <a href="{{ paginator.previous_page_path | replace: "index.html", "" }}" class="previous">&laquo; Previous</a>
+        </li>
+      {% else %}
+        <li class="arrow unavailable" aria-disabled="true">
+          <a>&laquo; Previous</a>
+        </li>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <li class="current"><a>{{ page }}</a></li>
+        {% elsif page == 1 %}
+          <li><a href="/blog/">{{ page }}</a></li>
+        {% else %}
+          <li><a href="/blog/{{ page }}">{{ page }}</a></li>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page and paginator.page != paginator.total_pages %}
+        <li class="arrow">
+          <a href="{{ paginator.next_page_path }}" class="next">Next &raquo;</a>
+        </li>
+      {% else %}
+        <li class="arrow unavailable" aria-disabled="true">
+          <a>Next &raquo;</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+
   <!--<p class="rss-subscribe">subscribe <a href="{{ "/blog/feed.xml" }}">via RSS</a></p>-->
 </div>

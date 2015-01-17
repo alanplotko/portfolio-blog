@@ -25,3 +25,7 @@ navigation:
   url: /blog/
 - text: Contact
   url: /contact/
+
+# Blog pagination
+paginate: 6
+paginate_path: "blog/:num/"

@@ -121,10 +121,8 @@ h1.cloud {
 
 ul.post-list {
 	list-style-type: none;
-	margin: 0 auto;
+	margin: 20px auto;
 	text-align: center;
-	position: relative;
-	top: 20px;
 }
 
 ul.post-list li {
@@ -167,6 +165,11 @@ ul.post-list li p.excerpt {
 	font-size: 14px;
 	margin: 0;
 }
+
+div.pagination-centered {
+	padding-bottom: 20px;
+}
+
 
 /* Card Design */
 
