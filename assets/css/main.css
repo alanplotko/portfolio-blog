@@ -87,6 +87,19 @@ h1.cloud {
 
 }
 
+@media (max-width:900px) {
+
+	ul.post-list li {
+		width: auto!important;
+		height: auto!important;
+	}
+
+	ul.pagination {
+		margin: 20px auto;
+	}
+
+}
+
 @media (max-width:640px) {
 
 	.top-bar-section ul.right li.active > a,
