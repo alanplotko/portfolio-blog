@@ -10,7 +10,7 @@ body {
 	Global: Main Navigation
 ------------------------------*/
 
-/* Entire Nav Bar */
+/* Entire Navigation */
 
 .top-bar {
 	background-color: #0D47A1;
@@ -31,6 +31,11 @@ body {
 	height: 4rem;
 }
 
+.top-bar-section {
+	height: 4rem;
+	line-height: 4rem;
+}
+
 /* Title Area */
 
 ul.title-area {
@@ -38,9 +43,40 @@ ul.title-area {
 	height: 4rem!important;
 }
 
-/* Big landscape tablets, laptops, and desktops */
+ul.title-area h1 {
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Cloud Icon */
+
+h1.cloud {
+	background: url("../img/svg/cloud.svg") no-repeat left center;
+	background-size: 36px 36px;
+	padding-left: 36px;
+}
+
+/* Right Section */
+
+.top-bar-section ul.right li {
+	background: none!important;
+}
+
+.top-bar-section ul.right li > a {
+	background: #0D47A1!important;
+}
+
+.top-bar-section ul.right li > a {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	line-height: 4rem!important;
+}
+
+/* ---------------------------------
+	Optimize for Mobile Platforms
+------------------------------------*/
 
 @media (min-width:1025px) {
+
 	ul.title-area {
 		padding-left: 36px;
 	}
@@ -48,9 +84,11 @@ ul.title-area {
 	.top-bar-section {
 		padding-right: 15px;
 	}
+
 }
 
 @media (max-width:640px) {
+
 	.top-bar-section ul.right li.active > a,
 	.top-bar-section ul.right li > a:hover {
 		background: #222!important;
@@ -60,6 +98,7 @@ ul.title-area {
 		border-bottom: 5px solid #d72711;
 		margin-top: -5px;
 	}
+	
 }
 
 @media (min-width:641px) {
@@ -74,41 +113,6 @@ ul.title-area {
 		margin-top: -15px;
 	}
 
-}
-
-ul.title-area h1 {
-	font-family: 'Roboto', sans-serif;
-}
-
-h1.cloud {
-	background: url("../img/svg/cloud.svg") no-repeat left center;
-	background-size: 36px 36px;
-	padding-left: 36px;
-}
-
-.no-svg h1.cloud {
-	background-image: url("../img/png/cloud.png") no-repeat left center;
-}
-
-/* Right Section */
-
-.top-bar-section {
-	height: 4rem;
-	line-height: 4rem;
-}
-
-.top-bar-section ul.right li {
-	background: none!important;
-}
-
-.top-bar-section ul.right li > a {
-	background: #0D47A1!important;
-}
-
-.top-bar-section ul.right li > a {
-	font-family: 'Roboto', sans-serif;
-	font-size: 1rem;
-	line-height: 4rem!important;
 }
 
 /* ---------------------------
