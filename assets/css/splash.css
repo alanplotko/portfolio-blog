@@ -6,6 +6,20 @@ body {
 	background-color: #0D47A1;
 }
 
+body::after {
+	background: url("../img/mountain.jpg") center center;
+	background-size: cover;
+	opacity: 0.5;
+	content: "";
+	z-index: -1;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 div#home,
 div#photo,
 div#error {
