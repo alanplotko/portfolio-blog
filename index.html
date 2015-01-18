@@ -3,6 +3,22 @@ layout: full
 title: Alan Plotko
 ---
 
+{% capture month %}{{ site.time | date: '%-m' | strip_newlines }}{% endcapture %}
+{% case month %}
+  {% when "12" or "1" or "2" %}
+    {% assign season = "winter" %}
+  {% when "3" or "4" or "5" %}
+    {% assign season = "spring" %}
+  {% when "6" or "7" or "8" %}
+    {% assign season = "summer" %}
+  {% else %}
+    {% assign season = "autumn" %}
+{% endcase %}
+
+<style>
+body::after { background: url("/assets/img/bg/{{ season }}.jpg") center center; }
+</style>
+
 <div id="home">
   <div id="name">
     <h1>Alan Plotko &bull; <span class="tagline">Full Stack Web Developer<span></h1>

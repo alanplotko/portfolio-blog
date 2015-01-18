@@ -1,5 +1,10 @@
 ---
 layout: default
+blog_categories:
+- Hackathons
+- Guides
+- Updates
+- Writing
 ---
 
 <div class="home">
@@ -8,13 +13,17 @@ layout: default
     {% for post in paginator.posts %}
       <li class="card">
         <span class="post-meta">
-          <span class="category"><a href="{{ post.category | downcase | replace: " ", "-" | prepend: "/blog/" }}">{{ post.category | upcase }}</a></span>
+          <span class="category">
+            <a href="{{ post.category | downcase | replace: " ", "-" | prepend: "/blog/" }}">{{ post.category | upcase }}</a>
+          </span>
           &nbsp;&nbsp;&nbsp;{{ post.date | date: "%-d %b, %Y" | upcase }}
         </span>
         <h2>
           <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
         </h2>
-        <p class="excerpt">{{ post.content | strip_html | truncatewords: 50 }} <a href="{{ post.url }}">Read more &raquo;</a></p>
+        <p class="excerpt">{{ post.content | strip_html | truncatewords: 50 }}
+          <a href="{{ post.url }}">Read more &raquo;</a>
+        </p>
       </li>
     {% endfor %}
   </ul>
