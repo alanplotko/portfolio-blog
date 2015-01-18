@@ -7,8 +7,9 @@ body {
 }
 
 body::after {
+	background: url("/assets/img/landscape.png") no-repeat center center;
 	background-size: cover;
-	opacity: 0.4;
+	opacity: 0.3;
 	content: "";
 	z-index: -1;
 	display: block;
