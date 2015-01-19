@@ -110,7 +110,16 @@ h1.cloud {
 		border-bottom: 5px solid #d72711;
 		margin-top: -5px;
 	}
-	
+
+	ul#blog li a,
+	ul#blog li button {
+		padding: 0.3rem 0.8rem;
+	}
+
+	ul#blog li:not(.arrow) {
+		display: none;
+	}
+
 }
 
 @media (min-width:641px) {
@@ -178,11 +187,6 @@ ul.posts li p.excerpt {
 	margin: 0;
 }
 
-div.pagination-centered {
-	padding-bottom: 20px;
-}
-
-
 /* Card Design */
 
 .card {
@@ -216,3 +220,23 @@ div.pagination-centered {
 	-o-transform: skew(8deg) rotate(3deg);
 	transform: skew(8deg) rotate(3deg);
 }
+
+/* Pagination */
+
+div.pagination-centered {
+	padding-bottom: 20px;
+}
+
+ul#blog li a,
+ul#blog li button {
+	padding: 0.7rem 1.2rem 0.7rem;
+	font-size: 1.25em;
+	font-family: 'Open Sans', sans-serif;
+	border-radius: 30px;
+}
+
+ul#blog li.arrow:not(.unavailable) a,
+ul#blog li.arrow:not(.unavailable) button {
+	color: #000;
+}
+

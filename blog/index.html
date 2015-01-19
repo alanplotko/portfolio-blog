@@ -24,7 +24,7 @@ layout: default
   </ul>
 
   <div class="pagination-centered">
-    <ul class="pagination" role="menubar" aria-label="Pagination">
+    <ul id="blog" class="pagination" role="menubar" aria-label="Pagination">
       {% if paginator.previous_page and paginator.page != 1 %}
         <li class="arrow">
           <a href="{{ paginator.previous_page_path | replace: "index.html", "" }}" class="previous">&laquo; Previous</a>
@@ -34,21 +34,30 @@ layout: default
           <a>&laquo; Previous</a>
         </li>
       {% endif %}
+      
+      {% assign startingDots = false %}
+      {% assign endingDots = true %}
 
       {% capture start %}{{ paginator.page | minus: site.paginate }}{% endcapture %}
       {% unless start contains "-" or start == "0" %}
+        {% assign startingDots = true %}
         {% capture start %}{{ start | plus: 1 }}{% endcapture %}
         {% capture end %}{{ start | plus: 4 }}{% endcapture %}
         {% capture diff %}{{ end | minus: paginator.total_pages }}{% endcapture %}
-        {% unless diff contains "-" or diff == "0" %}
+        {% unless diff contains "-" %}
           {% capture start %}{{ paginator.total_pages | minus: site.paginate | minus: 1 }}{% endcapture %}
           {% assign end = paginator.total_pages %}
+          {% assign endingDots = false %}
+        {% else %}
         {% endunless %}
       {% else %}
         {% assign start = 1 %}
         {% capture end %}{{ start | plus: 4 }}{% endcapture %}
       {% endunless %}
 
+      {% if startingDots %}
+        <li class="unavailable" aria-disabled="true"><a>...</a></li>
+      {% endif %}
       {% for page in (start..end) %}
         {% if page == paginator.page %}
           <li class="current"><a>{{ page }}</a></li>
@@ -58,6 +67,11 @@ layout: default
           <li><a href="/blog/page/{{ page }}">{{ page }}</a></li>
         {% endif %}
       {% endfor %}
+      {% capture diff %}{{ end | minus: paginator.total_pages }}{% endcapture %}
+
+      {% if endingDots %}
+        <li class="unavailable" aria-disabled="true"><a>...</a></li>
+      {% endif %}
 
       {% if paginator.next_page and paginator.page != paginator.total_pages %}
         <li class="arrow">
