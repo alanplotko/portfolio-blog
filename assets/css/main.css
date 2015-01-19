@@ -183,16 +183,16 @@ div.pagination-centered {
 }
 
 
-/* Post: Card Design */
+/* Card Design */
 
-.post {
+.card {
 	position: relative;
 	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-.post:before, .post:after {
+.card:before, .card:after {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -207,7 +207,7 @@ div.pagination-centered {
 	border-radius: 100px / 10px;
 }
 
-.post:after {
+.card:after {
 	right: 10px;
 	left: auto;
 	-webkit-transform: skew(8deg) rotate(3deg);
