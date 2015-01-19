@@ -88,7 +88,7 @@ h1.cloud {
 
 @media (max-width:900px) {
 
-	ul.post-list li {
+	ul.posts li {
 		width: auto!important;
 		height: auto!important;
 	}
@@ -131,13 +131,13 @@ h1.cloud {
 	Blog: Posts List
 ------------------------------*/
 
-ul.post-list {
+ul.posts {
 	list-style-type: none;
 	margin: 20px auto;
 	text-align: center;
 }
 
-ul.post-list li {
+ul.posts li {
 	display: inline-block;
 	background-color: #fff!important;
 	width: 400px;
@@ -149,17 +149,17 @@ ul.post-list li {
 	text-align: left;
 }
 
-ul.post-list li span.post-meta {
+ul.posts li span.post-meta {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 }
 
-ul.post-list li h2 {
+ul.posts li h2 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 }
 
-ul.post-list li h2 > a {
+ul.posts li h2 > a {
 	color: #000!important;
 
 	-webkit-transition: all 300ms ease;
@@ -168,11 +168,11 @@ ul.post-list li h2 > a {
 	transition: all 300ms ease;
 }
 
-ul.post-list li h2 > a:hover {
+ul.posts li h2 > a:hover {
 	color: #008CBA!important;
 }
 
-ul.post-list li p.excerpt {
+ul.posts li p.excerpt {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	margin: 0;
@@ -183,16 +183,16 @@ div.pagination-centered {
 }
 
 
-/* Card Design */
+/* Post: Card Design */
 
-.card {
+.post {
 	position: relative;
 	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-.card:before, .card:after {
+.post:before, .post:after {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -207,7 +207,7 @@ div.pagination-centered {
 	border-radius: 100px / 10px;
 }
 
-.card:after {
+.post:after {
 	right: 10px;
 	left: auto;
 	-webkit-transform: skew(8deg) rotate(3deg);

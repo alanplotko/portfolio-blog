@@ -1,17 +1,12 @@
 ---
 layout: default
-blog_categories:
-- Hackathons
-- Guides
-- Updates
-- Writing
 ---
 
 <div class="home">
 
-  <ul class="post-list">
+  <ul class="posts">
     {% for post in paginator.posts %}
-      <li class="card">
+      <li class="post">
         <span class="post-meta">
           <span class="category">
             <a href="{{ post.category | downcase | replace: " ", "-" | prepend: "/blog/" }}">{{ post.category | upcase }}</a>
