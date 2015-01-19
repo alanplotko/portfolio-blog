@@ -35,7 +35,21 @@ layout: default
         </li>
       {% endif %}
 
-      {% for page in (1..paginator.total_pages) %}
+      {% capture start %}{{ paginator.page | minus: site.paginate }}{% endcapture %}
+      {% unless start contains "-" or start == "0" %}
+        {% capture start %}{{ start | plus: 1 }}{% endcapture %}
+        {% capture end %}{{ start | plus: 4 }}{% endcapture %}
+        {% capture diff %}{{ end | minus: paginator.total_pages }}{% endcapture %}
+        {% unless diff contains "-" or diff == "0" %}
+          {% capture start %}{{ paginator.total_pages | minus: site.paginate | minus: 1 }}{% endcapture %}
+          {% assign end = paginator.total_pages %}
+        {% endunless %}
+      {% else %}
+        {% assign start = 1 %}
+        {% capture end %}{{ start | plus: 4 }}{% endcapture %}
+      {% endunless %}
+
+      {% for page in (start..end) %}
         {% if page == paginator.page %}
           <li class="current"><a>{{ page }}</a></li>
         {% elsif page == 1 %}
