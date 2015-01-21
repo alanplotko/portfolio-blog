@@ -7,9 +7,9 @@ body {
 }
 
 body::after {
-	background: url("/assets/img/cosmic.png") no-repeat center center fixed;
+	background: url("/assets/img/cosmic.png") no-repeat center bottom fixed;
 	background-size: cover;
-	opacity: 0.3;
+	opacity: 0.2;
 	content: "";
 	z-index: -1;
 	display: block;
