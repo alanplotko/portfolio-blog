@@ -10,7 +10,7 @@ body::after {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: url("/assets/img/cosmic.png") no-repeat bottom fixed;
+	background: url("/assets/img/cosmic.jpg") no-repeat bottom fixed;
 	background-size: cover;
 	opacity: 0.2;
 	content: "";
