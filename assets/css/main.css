@@ -66,7 +66,7 @@ h1.cloud {
 
 .top-bar-section ul.right li > a {
 	font-family: 'Roboto', sans-serif;
-	font-size: 1rem;
+	font-size: 1.05rem;
 	line-height: 4rem!important;
 }
 
@@ -235,8 +235,8 @@ ul#blog li button {
 	border-radius: 30px;
 }
 
-ul#blog li.arrow:not(.unavailable) a,
-ul#blog li.arrow:not(.unavailable) button {
-	color: #000;
+ul#blog li.arrow.unavailable a,
+ul#blog li.arrow.unavailable button {
+	display: none;
 }
 
