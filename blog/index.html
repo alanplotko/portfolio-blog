@@ -56,7 +56,7 @@ layout: default
       {% endunless %}
 
       {% if startingDots %}
-        <li class="unavailable" aria-disabled="true"><a>...</a></li>
+        <li><a href="/blog/">...</a></li>
       {% endif %}
       {% for page in (start..end) %}
         {% if page == paginator.page %}
@@ -70,7 +70,7 @@ layout: default
       {% capture diff %}{{ end | minus: paginator.total_pages }}{% endcapture %}
 
       {% if endingDots %}
-        <li class="unavailable" aria-disabled="true"><a>...</a></li>
+        <li><a href="/blog/page/{{ paginator.total_pages }}">...</a></li>
       {% endif %}
 
       {% if paginator.next_page and paginator.page != paginator.total_pages %}
