@@ -249,4 +249,18 @@ ul#blog li.arrow.unavailable button {
 	Blog: Post
 ------------------------------*/
 
+div.post {
+	margin: 20px 100px;
+}
 
+h1.post-title {
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+}
+
+article.post-content {
+	font-size: 22px;
+	line-height: 1.5;
+	font-family: 'Noto Serif', 'Georgia', sans-serif;
+}
