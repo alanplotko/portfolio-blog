@@ -13,17 +13,7 @@
       </div>
     </div>
 
-    <script src="/assets/js/vendor/jquery.js"></script>
-    <script src="/assets/js/foundation.min.js"></script>
-    <script>
-      if (!Modernizr.svg) {
-        $("img[src$='.svg']").each(function () {
-          $(this).attr("src", $(this).attr("src").replace(/svg/g, "png"));
-        });
-      }
-
-      $(document).foundation();
-    </script>
+    {% include scripts.html %}
   
   </body>
 </html>

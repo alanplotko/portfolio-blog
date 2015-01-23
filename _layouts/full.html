@@ -6,23 +6,8 @@
   <body>
 
     {{ content }}
-
-    <script src="/assets/js/vendor/jquery.js"></script>
-    <script src="/assets/js/foundation.min.js"></script>
-    <script>
-      $(document).ready(function() {
-
-        // If .svg format is not supported, replace all .svg's with .png's
-        if (!Modernizr.svg) {
-          $("img[src$='.svg']").each(function () {
-            $(this).attr("src", $(this).attr("src").replace(/svg/g, "png"));
-          });
-        }
-
-      });
-
-      $(document).foundation();
-    </script>
+    
+    {% include scripts.html %}
   
   </body>
 </html>

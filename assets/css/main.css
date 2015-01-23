@@ -187,7 +187,9 @@ ul.posts li p.excerpt {
 	margin: 0;
 }
 
-/* Card Design */
+/* ---------------------------
+	Blog: Post Card Design
+------------------------------*/
 
 .card {
 	position: relative;
@@ -221,7 +223,9 @@ ul.posts li p.excerpt {
 	transform: skew(8deg) rotate(3deg);
 }
 
-/* Pagination */
+/* ---------------------------
+	Blog: Pagination
+------------------------------*/
 
 div.pagination-centered {
 	padding-bottom: 20px;
@@ -239,4 +243,9 @@ ul#blog li.arrow.unavailable a,
 ul#blog li.arrow.unavailable button {
 	display: none;
 }
+
+/* ---------------------------
+	Blog: Post
+------------------------------*/
+
 

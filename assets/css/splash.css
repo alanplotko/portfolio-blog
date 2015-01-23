@@ -1,5 +1,48 @@
 /* ---------------------------
-	General: Front Page
+	Global: 404
+------------------------------*/
+
+div#error {
+	left: 50%;
+	width: 550px;
+    margin: -136.5px 0 0 -275px;
+    border: 2px dashed #fff;
+    border-radius: 10px;
+}
+
+div#error h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 48px;
+	color: #fff;
+	margin: 0 0 10px 0;
+	text-align: center;
+	border-bottom: 2px solid #fff;
+}
+
+div#error p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	color: #fff;
+}
+
+div#error a {
+	color: #90EE90!important;
+	border-bottom: 2px solid #90EE90;
+}
+
+div#error a:hover {
+	color: #20d420!important;
+	border-bottom: 2px solid #20d420!important;
+}
+
+div#error img.search {
+	width: 150px;
+	float: left;
+	margin: 20px;
+}
+
+/* ---------------------------
+	Front Page: General
 ------------------------------*/
 
 body {
@@ -53,52 +96,9 @@ div#photo {
 	margin: -72.17px 0 0 -125px;
 }
 
-/* ---------------------------
-	Global: 404
-------------------------------*/
-
-div#error {
-	left: 50%;
-	width: 550px;
-    margin: -136.5px 0 0 -275px;
-    border: 2px dashed #fff;
-    border-radius: 10px;
-}
-
-div#error h1 {
-	font-family: 'Roboto', sans-serif;
-	font-size: 48px;
-	color: #fff;
-	margin: 0 0 10px 0;
-	text-align: center;
-	border-bottom: 2px solid #fff;
-}
-
-div#error p {
-	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
-	color: #fff;
-}
-
-div#error a {
-	color: #90EE90!important;
-	border-bottom: 2px solid #90EE90;
-}
-
-div#error a:hover {
-	color: #20d420!important;
-	border-bottom: 2px solid #20d420!important;
-}
-
-div#error img.search {
-	width: 150px;
-	float: left;
-	margin: 20px;
-}
-
-/* ---------------------------
-	Main Navigation
-------------------------------*/
+/* ----------------------------------
+	Front Page: Main Navigation
+-------------------------------------*/
 
 ul#nav {
     list-style-type: none;
@@ -148,9 +148,9 @@ ul#nav li > a:hover:before {
 	transform: scaleX(1);
 }
 
-/* ---------------------------
-	Social Navigation
-------------------------------*/
+/* ----------------------------------
+	Front Page: Social Navigation
+-------------------------------------*/
 
 ul#social {
 	list-style-type: none;
@@ -174,9 +174,9 @@ ul#social li > a > img {
 	box-shadow: 0 1px 2px rgba(0,0,0,0.26);
 }
 
-/* ---------------------------------
-	Hexagon Photo Frame Design
-------------------------------------*/
+/* ------------------------------------
+	Front Page: Hexagon Frame Design
+---------------------------------------*/
 
 .hexagon {
   position: relative;
