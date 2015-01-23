@@ -237,6 +237,7 @@ ul#blog li button {
 	font-size: 1.25em;
 	font-family: 'Open Sans', sans-serif;
 	border-radius: 30px;
+	font-weight: 400;
 }
 
 ul#blog li.arrow.unavailable a,
