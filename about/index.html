@@ -1,0 +1,41 @@
+---
+layout: full
+title: About
+---
+
+<div id="home" class="page">
+    <div id="name">
+        <h1>About &bull; <span class="tagline">Alan Plotko<span></h1>
+    </div>
+    <ul id="nav">
+        <li><a href="{{ site.url }}">Home</a></li>
+        {% for link in site.navigation %}
+        {% capture currentLink %}{{ link.url }}index.html{% endcapture %}
+        <li {% if page.url == currentLink %}class="active"{% endif %}>
+          <a href="{{ link.url }}">{{ link.text }}</a>
+        </li>
+        {% endfor %}
+        <!-- Contact Modal -->
+        <li><a href="#" data-reveal-id="contact-modal">Contact</a></li>
+    </ul>
+</div>
+
+<ul class="posts">
+    <li class="card wide">
+        <p>Hello! The name’s Alan and I love creating new things! I'm a software developer and current student at Binghamton University in New York. I work across the full web stack, but my projects also delve outside the web.</p>
+
+        <p>I am pursuing summer internships to expand my skills and experience as an aspiring software developer. Feel free to <a href="#" data-reveal-id="contact-modal">contact me</a> to discuss internship or job opportunities.</p>
+
+        <p>You can check out my ongoing projects on <strong>GitHub</strong>: (<a href="https://github.com/alanplotko">@alanplotko</a>).</p>
+
+        <p>I occasionally tweet on <strong>Twitter</strong>: (<a href="https://twitter.com/alanplotko">@alanplotko</a>). Whenever I find free time, I also love answering questions on <strong>Stack Overflow</strong>: (<a href="https://stackoverflow.com/users/3125787/rdrazard">@rdrazard</a>).</p>
+
+        <p><a href="{{ site.url }}/blog/updates/self-publishing/">I write in my spare time</a>. It's a fantasy novel in the works that I've self-published previously when I won the NaNoWriMo challenge.</p>
+    </li>
+</ul>
+
+<div id="contact-modal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <h2 id="modalTitle">Contact Details</h2>
+    <p class="lead">You can contact me by email at: me <i class="fa fa-at"></i> alanplotko.com</p>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>

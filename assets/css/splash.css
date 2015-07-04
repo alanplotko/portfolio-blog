@@ -70,6 +70,13 @@ div#error {
 	top: 50%;
 }
 
+div#home.page {
+	position: relative;
+	top: 25px;
+	left: 0;
+	margin: 0;
+}
+
 div#home {
 	left: 50%;
 	width: 100%;
@@ -146,6 +153,14 @@ ul#nav li > a:hover:before {
 	visibility: visible;
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
+}
+
+ul#nav li.active > a:hover:before {
+	visibility: hidden;
+}
+
+ul#nav li.active a {
+	border-bottom: 2px solid #fff;
 }
 
 /* ----------------------------------
@@ -354,4 +369,70 @@ ul#social li > a > img {
 		margin: 0;
 	}
 
+}
+
+/* -----------------------------
+	Full Layout: Card Design
+--------------------------------*/
+
+.card {
+	position: relative;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;;
+}
+
+.card:before, .card:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0 0 20px rgba(0,0,0,0.8);;
+	box-shadow: 0 0 20px rgba(0,0,0,0.8);;
+	top: 0;
+	bottom: 0;
+	left: 10px;
+	right: 10px;
+	-moz-border-radius: 100px / 10px;;
+	border-radius: 100px / 10px;;
+}
+
+.card.wide {
+	width: 80%;
+	height: auto;
+}
+
+.card.wide p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.card.wide h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2rem;
+}
+
+.card.wide hr {
+	margin: 0 0 2rem 0;
+}
+
+/* -------------------------
+	Full Layout: Card List
+----------------------------*/
+
+ul.posts {
+	list-style-type: none;
+	margin: 20px auto;
+	text-align: center;
+}
+
+ul.posts li {
+	display: inline-block;
+	background-color: #fff!important;
+	width: 400px;
+	height: 270px;
+	margin: 20px;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	vertical-align: top;
+	text-align: left;
 }
