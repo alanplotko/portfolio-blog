@@ -9,7 +9,7 @@ title: Alan Plotko
   </div>
   <ul id="nav">
     {% for link in site.navigation %}
-    {% capture currentLink %}{{ link.url }}{% if link.url != '/index.html' %}index.html{% endif %}{% endcapture %}
+    {% capture currentLink %}{% if link.url == site.url %}{{ site.url }}{% else %}{{ link.url }}{% if link.url != '/index.html'%}index.html{% endif %}{% endif %}{% endcapture %}
     <li {% if page.url == currentLink %}class="active"{% endif %}>
       <a href="{{ link.url }}">{{ link.text }}</a>
     </li>
