@@ -8,7 +8,6 @@ title: About
         <h1>About &bull; <span class="tagline">Alan Plotko<span></h1>
     </div>
     <ul id="nav">
-        <li><a href="{{ site.url }}">Home</a></li>
         {% for link in site.navigation %}
         {% capture currentLink %}{{ link.url }}index.html{% endcapture %}
         <li {% if page.url == currentLink %}class="active"{% endif %}>
