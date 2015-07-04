@@ -397,11 +397,6 @@ ul#social li > a > img {
 	border-radius: 100px / 10px;;
 }
 
-.card.wide {
-	width: 80%;
-	height: auto;
-}
-
 .card.wide p {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -419,17 +414,18 @@ ul#social li > a > img {
 	Full Layout: Card List
 ----------------------------*/
 
-ul.posts {
+ul#about,
+ul#repos-list {
 	list-style-type: none;
 	margin: 20px auto;
 	text-align: center;
 }
 
-ul.posts li {
+ul#about li,
+ul#repos-list li {
 	display: inline-block;
 	background-color: #fff!important;
-	width: 400px;
-	height: 270px;
+	height: auto;
 	margin: 20px;
 	padding: 20px;
 	border: 1px solid rgba(0, 0, 0, 0.4);
