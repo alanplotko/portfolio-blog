@@ -1,36 +1,76 @@
----
-layout: full
-title: Alan Plotko
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<div id="home">
-  <div id="name">
-    <h1>Alan Plotko &bull; <span class="tagline">Full Stack Web Developer<span></h1>
-  </div>
-  <ul id="nav">
-    {% for link in site.navigation %}
-    {% capture currentLink %}{% if link.url == site.url %}{{ site.url }}{% else %}{{ link.url }}{% if link.url != '/index.html'%}index.html{% endif %}{% endif %}{% endcapture %}
-    <li {% if page.url == currentLink %}class="active"{% endif %}>
-      <a href="{{ link.url }}">{{ link.text }}</a>
-    </li>
-    {% endfor %}
-    <!-- Contact Modal -->
-    <li><a href="#" data-reveal-id="contact-modal">Contact</a></li>
-  </ul>
-  <ul id="social">
-    <li><a href="https://github.com/alanplotko"><img src="/assets/img/svg/github.svg" /></a></li>
-    <li><a href="https://twitter.com/alanplotko"><img src="/assets/img/svg/twitter.svg" /></a></li>
-    <li><a href="http://stackoverflow.com/users/3125787/rdrazard"><img src="/assets/img/svg/stackoverflow.svg" /></a></li>
-    <li><a href="https://www.linkedin.com/in/alanplotko"><img src="/assets/img/svg/linkedin.svg" /></a></li>
-  </ul>
-  <div id="photo" class="hexagon">
-    <div class="hexTop"></div>
-    <div class="hexBottom"></div>
-  </div>
-</div>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Alan Plotko</title>
+  <meta name="description" content="Alan Plotko is a Software Engineer that loves building new things.">
+  <meta name="author" content="Alan Plotko">
 
-<div id="contact-modal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h2 id="modalTitle">Contact Details</h2>
-  <p class="lead">You can contact me by email at: me <i class="fa fa-at"></i> alanplotko.com</p>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/skeleton.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://use.fontawesome.com/e19c1e2a3a.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+</head>
+<body id="loader">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div id="particles-js"></div>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 25%;">
+        <h1 class="noselect name-header">Alan Plotko</h1>
+        <h4 class="noselect">Software Engineer</h4>
+        <a href="https://github.com/alanplotko/" target="_blank" title="GitHub" alt="GitHub">
+          <i class="fa fa-github fa-3x space-right" aria-hidden="true"></i>
+        </a>
+        <a href="https://linkedin.com/in/alanplotko/" target="_blank" title="LinkedIn" alt="LinkedIn">
+          <i class="fa fa-linkedin fa-3x space-right" aria-hidden="true"></i>
+        </a>
+        <a href="assets/pdf/resume.pdf" target="_blank" title="Resume" alt="Resume">
+          <i class="fa fa-file-pdf-o fa-3x space-right" aria-hidden="true"></i>
+        </a>
+        <i class="fa fa-envelope-o fa-3x email-btn" aria-hidden="true" title="Email" alt="Email"></i>
+        <p class="note">
+          <code>You can reach me at:</code><br />
+          <code><strong>me [at] alanplotko.com</strong></code>
+        </p>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    particlesJS.load('particles-js', 'assets/particles/config.json');
+    $('.email-btn').click(function() {
+      $('p.note').fadeToggle('fast', 'linear');
+    });
+  });
+</script>
+</html>
