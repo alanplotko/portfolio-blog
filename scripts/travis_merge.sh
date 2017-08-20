@@ -41,7 +41,6 @@ git add assets/css/style.min.css
 html-minifier index.html --remove-comments --minify-js 1 --collapse-whitespace -o index.html
 git add index.html
 git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to stage"
-git push -q upstream HEAD:gh-pages
 
 printf 'Pushing to %s\n' "$GITHUB_REPO" >&2
 
