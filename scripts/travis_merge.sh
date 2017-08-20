@@ -24,7 +24,8 @@ git remote add upstream "https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO" >
 git fetch upstream
 git checkout -b "$BRANCH_TO_MERGE_INTO"
 
-ls
+printf 'Merging %s\n' "$TRAVIS_COMMIT" >&2
+git merge --ff-only "$TRAVIS_COMMIT"
 
 printf 'Cleaning up [%s] for release\n' "$BRANCH_TO_MERGE_INTO" >&2
 git config user.name $GIT_COMMITTER_NAME >/dev/null 2>&1
