@@ -20,7 +20,7 @@ git clone "https://github.com/$GITHUB_REPO" "$repo_temp"
 cd "$repo_temp"
 
 printf 'Resetting [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
-git branch -D $BRANCH_TO_MERGE_INTO
+git branch -D $BRANCH_TO_MERGE_INTO &>/dev/null
 git checkout "$TRAVIS_BRANCH"
 git branch $BRANCH_TO_MERGE_INTO
 
