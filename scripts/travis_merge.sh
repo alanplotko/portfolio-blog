@@ -48,16 +48,29 @@ git rm .gitignore --ignore-unmatch
 # Minify style.css
 uglifycss assets/css/style.css --output assets/css/style.min.css
 git rm assets/css/style.css --ignore-unmatch
-git add assets/css/style.min.css
 
 # Minify index.html
 html-minifier index.html --remove-comments --minify-js 1 --collapse-whitespace -o index.html
 git add index.html
 
-# Minify particles.js
-uglifyjs --compress --mangle -o assets/js/particles.min.js -- assets/js/particles.js
+# Concatenate stylesheets
+concat-cli -f assets/css/normalize.min.css assets/css/skeleton.min.css assets/css/font-awesome.min.css assets/css/style.min.css -o assets/css/bundle.min.css
+git rm assets/css/normalize.min.css --ignore-unmatch
+git rm assets/css/skeleton.min.css --ignore-unmatch
+git rm assets/css/font-awesome.min.css --ignore-unmatch
+git rm assets/css/style.min.css --ignore-unmatch
+git add assets/css/bundle.min.css
+
+# Concatenate scripts
+concat-cli -f assets/js/jquery.js assets/js/particles.js assets/js/setup.js -o assets/js/bundle.js
+git rm assets/js/jquery.js --ignore-unmatch
 git rm assets/js/particles.js --ignore-unmatch
-git add assets/js/particles.min.js
+git rm assets/js/setup.js --ignore-unmatch
+
+# Minify bundle script
+uglifyjs --compress --mangle -o assets/js/bundle.min.js -- assets/js/bundle.js
+git rm assets/js/bundle.js --ignore-unmatch
+git add assets/js/bundle.min.js
 
 # Commit changes
 git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to [$BRANCH_TO_MERGE_INTO]"
