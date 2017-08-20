@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "express": "^4.15.4",
     "mocha": "^3.5.0",
     "mocha-csslint": "^1.0.0"
   },

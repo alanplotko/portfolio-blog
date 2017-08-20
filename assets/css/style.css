@@ -53,4 +53,8 @@ a, a:hover, a:visited, a:active {
   user-select: none;
 }
 
-.space-right { margin-right: 25px; } /* Custom margin for icons */
+.link-icon {
+  margin: 0 8px;
+  width: 48px;
+  height: 48px;
+}
