@@ -22,15 +22,10 @@ cd "$repo_temp"
 printf 'Checking out %s\n' "$BRANCH_TO_MERGE_INTO" >&2
 git checkout -b "$BRANCH_TO_MERGE_INTO"
 
-printf 'Merging %s\n' "$TRAVIS_COMMIT" >&2
-git merge --ff-only "$TRAVIS_COMMIT"
-
 printf 'Cleaning up for release\n' >&2
 git config user.name $GIT_COMMITTER_NAME >/dev/null 2>&1
 git config user.email $GIT_COMMITTER_EMAIL >/dev/null 2>&1
 git remote add upstream "https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO" >/dev/null 2>&1
-git fetch upstream
-git reset upstream/$BRANCH_TO_MERGE_INTO
 git rm -rf scripts/
 git rm -rf test/
 git rm README.md
@@ -45,8 +40,8 @@ json-minify assets/config/particles.json
 git add assets/config/particles.json
 html-minifier index.html --remove-comments --minify-js 1 --collapse-whitespace -o index.html
 git add index.html
-git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to stage"
+git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to [$BRANCH_TO_MERGE_INTO]"
 
 # Redirect to /dev/null to avoid secret leakage
 printf 'Pushing to %s\n' "$GITHUB_REPO" >&2
-git push -q upstream HEAD:$BRANCH_TO_MERGE_INTO >/dev/null 2>&1
+git push -q upstream +$BRANCH_TO_MERGE_INTO:$BRANCH_TO_MERGE_INTO >/dev/null 2>&1
