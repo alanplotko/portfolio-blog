@@ -31,6 +31,8 @@ rm -rf test/
 ./node_modules/.bin/minify --output assets/css/style.min.css assets/css/style.css
 rm assets/css/style.css
 ./node_modules/.bin/html-minifier index.html --remove-comments --minify-js 1 --collapse-whitespace -o index.html
+rm package.json
+rm package-lock.json
 
 printf 'Pushing to %s\n' "$GITHUB_REPO" >&2
 
