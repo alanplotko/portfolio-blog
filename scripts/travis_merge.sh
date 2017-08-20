@@ -26,13 +26,16 @@ printf 'Merging %s\n' "$TRAVIS_COMMIT" >&2
 git merge --ff-only "$TRAVIS_COMMIT"
 
 printf 'Cleaning up for release\n' >&2
-rm -rf scripts/
-rm -rf test/
-rm package.json
-rm package-lock.json
+git rm -rf scripts/
+git rm -rf test/
+git rm package.json
+git rm package-lock.json
 minify --output assets/css/style.min.css assets/css/style.css
-rm assets/css/style.css
+git rm assets/css/style.css
+git add assets/css/style.min.css
 html-minifier index.html --remove-comments --minify-js 1 --collapse-whitespace -o index.html
+git add index.html
+git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to stage"
 
 printf 'Pushing to %s\n' "$GITHUB_REPO" >&2
 
