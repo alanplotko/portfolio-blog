@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Personal website",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "json-minify": "^1.0.0"
+  },
   "devDependencies": {
     "mocha": "^3.5.0",
     "mocha-csslint": "^1.0.0"

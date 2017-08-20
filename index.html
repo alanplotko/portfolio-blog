@@ -6,17 +6,18 @@
   <meta name="description" content="Alan Plotko is a Software Engineer that loves building new things.">
   <meta name="author" content="Alan Plotko">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Fonts -->
+
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600" rel="stylesheet" type="text/css">
-  <!-- Stylesheets -->
+
   <link rel="stylesheet" href="assets/css/normalize.min.css">
   <link rel="stylesheet" href="assets/css/skeleton.min.css">
   <link rel="stylesheet" href="assets/css/style.min.css">
-  <!-- Favicon -->
+
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
 </head>
 <body id="loader">
-  <div id="particles-js" class="particles-view"></div>
+  <div id="particles-js"></div>
   <div class="container">
     <div class="row">
       <div class="twelve columns" style="margin-top: 25%;">
@@ -33,8 +34,7 @@
         </a>
         <i class="fa fa-envelope-o fa-3x email-btn" aria-hidden="true" title="Email" alt="Email"></i>
         <p class="note">
-          <code>You can reach me at:</code>
-          <br />
+          <code>You can reach me at:</code><br />
           <code><strong>me [at] alanplotko.com</strong></code>
         </p>
       </div>
@@ -47,7 +47,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    particlesJS.load('particles-js', 'assets/config/particles.json');
+    particlesJS.load('particles-js', 'assets/particles/config.json');
     $('.email-btn').click(function() {
       $('p.note').fadeToggle('fast', 'linear');
     });
