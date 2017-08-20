@@ -45,11 +45,6 @@ git rm package-lock.json --ignore-unmatch
 git rm .travis.yml --ignore-unmatch
 git rm .gitignore --ignore-unmatch
 
-# Minify style.css
-uglifycss assets/css/style.css --output assets/css/style.min.css
-git rm assets/css/style.css --ignore-unmatch
-git add assets/css/style.min.css
-
 # Minify index.html
 html-minifier index.html --remove-comments --remove-attribute-quotes --minify-css 1 --minify-js 1 --collapse-whitespace --collapse-boolean-attributes -o index.html
 git add index.html
