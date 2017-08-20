@@ -19,11 +19,8 @@ git clone "https://github.com/$GITHUB_REPO" "$repo_temp"
 # shellcheck disable=SC2164
 cd "$repo_temp"
 
-printf 'Checking out [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
-git checkout -b "$BRANCH_TO_MERGE_INTO"
-
-printf 'Merging %s\n' "$TRAVIS_COMMIT" >&2
-git merge --ff-only "$TRAVIS_COMMIT"
+printf 'Setting up [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
+git checkout -b "$BRANCH_TO_MERGE_INTO" "$TRAVIS_COMMIT"
 
 printf 'Cleaning up [%s] for release\n' "$BRANCH_TO_MERGE_INTO" >&2
 git config user.name $GIT_COMMITTER_NAME >/dev/null 2>&1
@@ -45,5 +42,5 @@ git add index.html
 git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to [$BRANCH_TO_MERGE_INTO]"
 
 # Redirect to /dev/null to avoid secret leakage
-printf 'Deploying to [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
+printf 'Deploying [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
 git push -u upstream $BRANCH_TO_MERGE_INTO >/dev/null 2>&1
