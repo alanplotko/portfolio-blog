@@ -46,5 +46,8 @@ git add index.html
 git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to [$BRANCH_TO_MERGE_INTO]"
 
 # Redirect to /dev/null to avoid secret leakage
+
+printf 'Resetting [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
+git push upstream :BRANCH_TO_MERGE_INTO >/dev/null 2>&1
 printf 'Deploying to [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
-git push -qu upstream $BRANCH_TO_MERGE_INTO --delete $BRANCH_TO_MERGE_INTO >/dev/null 2>&1
+git push -u upstream $BRANCH_TO_MERGE_INTO >/dev/null 2>&1
