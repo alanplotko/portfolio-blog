@@ -51,7 +51,7 @@ git rm assets/css/style.css --ignore-unmatch
 git add assets/css/style.min.css
 
 # Minify index.html
-html-minifier index.html --remove-comments --minify-js 1 --collapse-whitespace -o index.html
+html-minifier index.html --remove-comments --remove-attribute-quotes --minify-css 1 --minify-js 1 --collapse-whitespace --collapse-boolean-attributes -o index.html
 git add index.html
 
 # Minify particles.js

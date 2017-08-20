@@ -7,12 +7,75 @@
   <meta name="author" content="Alan Plotko">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" href="assets/css/normalize.min.css">
-  <link rel="stylesheet" href="assets/css/skeleton.min.css">
-  <link rel="stylesheet" href="assets/css/style.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bundle.min.css">
+  <style>
+    /* Particle effect */
 
+    .particles-view {
+      background-color: #222;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    /* Content */
+
+    .container {
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .note {
+      color: #000;
+      margin-top: 35px;
+      display: none;
+    }
+
+    .email-btn {
+      cursor: pointer;
+    }
+
+    .name-header {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, i {
+      color: #fff;
+    }
+
+    a, a:hover, a:visited, a:active {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Utilities */
+
+    .noselect {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .link-icon {
+      margin: 0 8px;
+      width: 48px;
+      height: 48px;
+    }
+  </style>
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
 </head>
@@ -42,17 +105,18 @@
       </div>
     </div>
   </div>
-</body>
 
-<script src="assets/js/particles.min.js" defer></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js" defer></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    particlesJS.load('particles-js');
-    $('.email-btn').click(function() {
-      $('p.note').fadeToggle('fast', 'linear');
+  <!-- Scripts -->
+  <script src="assets/js/particles.min.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js" defer></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      particlesJS.load('particles-js');
+      $('.email-btn').click(function() {
+        $('p.note').fadeToggle('fast', 'linear');
+      });
     });
-  });
-</script>
+  </script>
+</body>
 </html>
