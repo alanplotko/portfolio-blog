@@ -1,0 +1,26 @@
+{
+  "name": "alanplotko.github.io",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "html-minifier": "^3.5.3",
+    "minifier": "^0.8.1",
+    "mocha": "^3.5.0",
+    "mocha-csslint": "^1.0.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanplotko/alanplotko.github.io.git"
+  },
+  "author": "Alan Plotko",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/alanplotko/alanplotko.github.io/issues"
+  },
+  "homepage": "https://github.com/alanplotko/alanplotko.github.io#readme"
+}

@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '8'
+sudo: false
+dist: trusty
+branches:
+  only:
+  - develop
+env:
+  global:
+    secure: BYN+cU2Nz7gku/3OgCqelQ5A+fNPLx18vthLFlU9PvtptKSqtkK+wiTWUJJdDAVR1XViyaOLcjim3YRBkz2/s0Fg6VRI7fFwAuHv5rGUzF8Bl/W6F3SVgrRtCg7QXiZsqxnNIwrkgNWRuFfIIdYNfJCa/T7tFyUko2NOg3o1BSYFOFDT6lagFvKc03iObZFYivWVN1OGFfYhnN7ZV03OkO6z44zsYmL4Kn5zugvCobYSwRNKi6aw5B9yM8IAKFrBNN67mPepmOwv5w1juphPWjUjhcplcuUzLETwx3Zkvz/GCS0c8wh4NLPXHKmMin4/gAYZZCNBeUFsp2ZQCjdxbxB5sDjDNtf4gk00CQEu9TL1px/mbvdroHXKhvOgMT0wSXq6boYHvatd+7bolyvmQ5TUbS3I+CDE87eIiiDCGR3mvt15nkGvUV8G0SaoNoxTIl72VZzJFTbhPchnacrj0hvse4OsEnF4CZTaiBOgIVzoLOpD5pR9S+sBm6Ub77K78f3y4wq7+14zSd5kNWG4LgiMHTwMFYA+IVMMCG5oEhw23XILBrJE6xk0Wrcsn5UY5Es7a/onEkA4zjFHLbDGJITnH6PGlf2bFEEJr6ZyzyQUPjP5CnDq2uNRT2Zk42ffgub+Hm6JmhPJiHo+uWt6hESqli1SNXGFhf3h5f9iFH8=
+after_success:
+  - "curl -o /tmp/travis_automerge.sh ./test/travis_merge.sh"
+  - "chmod a+x /tmp/travis-automerge.sh"
+  - "BRANCHES_TO_MERGE_REGEX='^develop/' BRANCH_TO_MERGE_INTO=stage GITHUB_REPO=alanplotko/alanplotko.github.io /tmp/travis_automerge.sh"
