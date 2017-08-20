@@ -33,8 +33,11 @@ git fetch upstream
 git reset upstream/$BRANCH_TO_MERGE_INTO
 git rm -rf scripts/
 git rm -rf test/
+git rm README.md
 git rm package.json
 git rm package-lock.json
+git rm .travis.yml
+git rm .gitignore
 minify --output assets/css/style.min.css assets/css/style.css
 git rm assets/css/style.css
 git add assets/css/style.min.css
@@ -42,7 +45,6 @@ html-minifier index.html --remove-comments --minify-js 1 --collapse-whitespace -
 git add index.html
 git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to stage"
 
-printf 'Pushing to %s\n' "$GITHUB_REPO" >&2
-
 # Redirect to /dev/null to avoid secret leakage
-- git push -q upstream HEAD:$BRANCH_TO_MERGE_INTO >/dev/null 2>&1
+printf 'Pushing to %s\n' "$GITHUB_REPO" >&2
+git push -q upstream HEAD:$BRANCH_TO_MERGE_INTO >/dev/null 2>&1
