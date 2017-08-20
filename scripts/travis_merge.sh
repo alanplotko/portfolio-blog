@@ -30,6 +30,7 @@ git config user.name $GIT_COMMITTER_NAME >/dev/null 2>&1
 git config user.email $GIT_COMMITTER_EMAIL >/dev/null 2>&1
 git remote add upstream "https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO" >/dev/null 2>&1
 git fetch upstream
+git reset upstream/$BRANCH_TO_MERGE_INTO
 git rm -rf scripts/
 git rm -rf test/
 git rm README.md
@@ -40,7 +41,7 @@ git rm .gitignore
 uglifycss assets/css/style.css --output assets/css/style.min.css
 git rm assets/css/style.css
 git add assets/css/style.min.css
-minify-json assets/config/particles.json
+json-minify assets/config/particles.json
 git add assets/config/particles.json
 html-minifier index.html --remove-comments --minify-js 1 --collapse-whitespace -o index.html
 git add index.html
