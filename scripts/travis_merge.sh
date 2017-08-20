@@ -49,6 +49,10 @@ git rm .gitignore --ignore-unmatch
 html-minifier index.html --remove-comments --remove-attribute-quotes --minify-css 1 --minify-js 1 --collapse-whitespace --collapse-boolean-attributes -o index.html
 git add index.html
 
+# Minify manifest.json
+minify-json manifest.json
+git add manifest.json
+
 # Minify particles.js
 uglifyjs --compress --mangle -o assets/js/particles.min.js -- assets/js/particles.js
 git rm assets/js/particles.js --ignore-unmatch

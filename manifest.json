@@ -3,6 +3,8 @@
   "name": "Alan Plotko",
   "background_color": "#222",
   "theme_color": "#222",
+  "display": "browser",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "assets/images/launcher-icon-1x.png",
