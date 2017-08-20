@@ -39,7 +39,7 @@ git rm .gitignore
 uglifycss assets/css/style.css --output assets/css/style.min.css
 git rm assets/css/style.css
 git add assets/css/style.min.css
-json-minify assets/config/particles.json
+minify-json assets/config/particles.json
 git add assets/config/particles.json
 html-minifier index.html --remove-comments --minify-js 1 --collapse-whitespace -o index.html
 git add index.html
