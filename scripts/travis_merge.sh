@@ -27,8 +27,7 @@ git push upstream :$BRANCH_TO_MERGE_INTO >/dev/null 2>&1
 printf 'Recreating [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
 git checkout -b "$BRANCH_TO_MERGE_INTO"
 
-printf 'Merging %s\n' "$TRAVIS_COMMIT" >&2
-git merge --ff-only "$TRAVIS_COMMIT"
+ls
 
 printf 'Cleaning up [%s] for release\n' "$BRANCH_TO_MERGE_INTO" >&2
 git config user.name $GIT_COMMITTER_NAME >/dev/null 2>&1
