@@ -43,4 +43,4 @@ git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to [$BRANCH_TO_MERGE_INT
 
 # Redirect to /dev/null to avoid secret leakage
 printf 'Deploying [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
-git push -u upstream $BRANCH_TO_MERGE_INTO >/dev/null 2>&1
+git push -u origin $BRANCH_TO_MERGE_INTO >/dev/null 2>&1
