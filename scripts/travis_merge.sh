@@ -22,6 +22,7 @@ cd "$repo_temp"
 printf 'Checking out [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
 git checkout -b "$BRANCH_TO_MERGE_INTO"
 git remote add upstream "https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO" >/dev/null 2>&1
+git fetch upstream
 
 printf 'Merging %s\n' "$TRAVIS_COMMIT" >&2
 git merge --ff-only "$TRAVIS_COMMIT"
@@ -46,8 +47,7 @@ git add index.html
 git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to [$BRANCH_TO_MERGE_INTO]"
 
 # Redirect to /dev/null to avoid secret leakage
-
 printf 'Resetting [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
-git push upstream :BRANCH_TO_MERGE_INTO >/dev/null 2>&1
+git push upstream :$BRANCH_TO_MERGE_INTO >/dev/null 2>&1
 printf 'Deploying to [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
 git push -u upstream $BRANCH_TO_MERGE_INTO >/dev/null 2>&1
