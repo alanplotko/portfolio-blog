@@ -38,9 +38,10 @@ git rm package.json
 git rm package-lock.json
 git rm .travis.yml
 git rm .gitignore
-minify --output assets/css/style.min.css assets/css/style.css
+uglifycss assets/css/style.css --output assets/css/style.min.css
 git rm assets/css/style.css
 git add assets/css/style.min.css
+json-minify assets/config/particles.json
 html-minifier index.html --remove-comments --minify-js 1 --collapse-whitespace -o index.html
 git add index.html
 git commit -m "Clean up for build #$TRAVIS_BUILD_NUMBER to stage"
