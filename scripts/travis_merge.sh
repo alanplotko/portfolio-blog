@@ -19,12 +19,9 @@ git clone "https://github.com/$GITHUB_REPO" "$repo_temp"
 # shellcheck disable=SC2164
 cd "$repo_temp"
 
-printf 'Resetting [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
+printf 'Recreating [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
 git remote add upstream "https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO" >/dev/null 2>&1
 git fetch upstream
-git push upstream :$BRANCH_TO_MERGE_INTO >/dev/null 2>&1
-
-printf 'Recreating [%s]\n' "$BRANCH_TO_MERGE_INTO" >&2
 git checkout -b "$BRANCH_TO_MERGE_INTO"
 
 ls
