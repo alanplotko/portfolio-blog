@@ -15,4 +15,4 @@ after_success:
 - cp scripts/travis_merge.sh /tmp/travis_merge.sh
 - chmod a+x /tmp/travis_merge.sh
 - BRANCHES_TO_MERGE_REGEX='^develop/' BRANCH_TO_MERGE_INTO=stage GITHUB_REPO=alanplotko/alanplotko.github.io
-  /tmp/travis_automerge.sh
+  /tmp/travis_merge.sh
