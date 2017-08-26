@@ -61,5 +61,5 @@ typings/
 _site
 .sass-cache
 
-# Ignore files that will be generated in stage branch
+# Ignore files generated for testing that will otherwise be generated regularly through the stage branch
 assets/js/particles.min.js
