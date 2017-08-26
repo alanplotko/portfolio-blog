@@ -8,10 +8,13 @@
     "express": "^4.15.4",
     "mocha": "^3.5.0",
     "mocha-csslint": "^1.0.0",
-    "mocha-htmllint": "^1.4.2"
+    "mocha-htmllint": "^1.4.2",
+    "nodemon": "^1.11.0",
+    "uglify-js": "^3.0.28"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "start": "./node_modules/.bin/uglifyjs --compress --mangle -o assets/js/particles.min.js -- assets/js/particles.js; ./node_modules/.bin/nodemon scripts/server.js"
   },
   "repository": {
     "type": "git",

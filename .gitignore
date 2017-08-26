@@ -60,3 +60,6 @@ typings/
 # Miscellaneous
 _site
 .sass-cache
+
+# Ignore files that will be generated in stage branch
+assets/js/particles.min.js
